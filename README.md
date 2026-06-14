@@ -28,9 +28,12 @@
 
 ## 学习路线
 
-详细路线请查看：
+学习文档请查看：
 
-- [Linker Hand + BODex 学习路线](./LinkerHand_BODex_学习路线.md)
+- [文档总目录](./docs/README.md)
+- [Linker Hand + BODex 学习路线](./docs/roadmaps/linkerhand-bodex.md)
+- [MuJoCo 零基础实战教程](./docs/tutorials/mujoco.md)
+- [MuJoCo 配套示例](./examples/mujoco/README.md)
 
 整体分为以下阶段：
 
@@ -39,10 +42,11 @@
 | 1 | Python、NumPy、Linux、Git | 进行中 |
 | 2 | 坐标系、矩阵与机器人运动学 | 未开始 |
 | 3 | ROS 2、URDF、TF 和 RViz | 未开始 |
-| 4 | 跑通 BODex 官方示例 | 未开始 |
-| 5 | 适配 Linker Hand 模型 | 未开始 |
-| 6 | 物理仿真与抓取验证 | 未开始 |
-| 7 | Linker Hand 真机控制 | 未开始 |
+| 4 | MuJoCo 基础与抓取仿真 | 未开始 |
+| 5 | 跑通 BODex 官方示例 | 未开始 |
+| 6 | 适配 Linker Hand 模型 | 未开始 |
+| 7 | 物理仿真与抓取验证 | 未开始 |
+| 8 | Linker Hand 真机控制 | 未开始 |
 
 状态说明：`未开始`、`进行中`、`已完成`。
 
@@ -147,4 +151,3 @@
 3. 每次只修改一个问题，并记录修改前后的现象。
 4. 仿真通过后再连接真机。
 5. 真机实验始终使用限位、限速和急停保护。
-
