@@ -10,6 +10,10 @@
 
 - [MuJoCo 零基础实战教程](./tutorials/mujoco.md)
 
+## 参考手册
+
+- [MJCF/XML 零基础速查](./references/mjcf-quick-reference.md)
+
 ## 配套示例
 
 - [MuJoCo 示例代码](../examples/mujoco/README.md)
@@ -21,4 +25,3 @@
 3. 按顺序完成 MuJoCo 教程中的 7 个实验。
 4. 跑通 BODex 官方示例。
 5. 开始 Linker Hand 模型与关节映射适配。
-

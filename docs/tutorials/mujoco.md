@@ -32,6 +32,10 @@
 
 ## 2. MuJoCo 中最重要的概念
 
+第一次接触MJCF/XML时，可以配合阅读：
+
+- [MJCF/XML 零基础速查](../references/mjcf-quick-reference.md)
+
 | 概念 | 含义 | Linker Hand 中的用途 |
 | --- | --- | --- |
 | body | 刚体和坐标系 | 掌心、指节、物体 |
