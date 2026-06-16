@@ -106,6 +106,7 @@ examples/mujoco/
 ├── requirements.txt
 ├── scripts/
 │   ├── 01_free_fall.py
+│   ├── 01_free_fall_record_video.py
 │   ├── 02_read_state.py
 │   ├── 03_single_joint.py
 │   ├── 04_motion_control.py
@@ -129,6 +130,18 @@ python scripts/01_free_fall.py
 ```
 
 你会看到一个小球从 1 米高度落下，与地面发生碰撞。
+
+如果没有UI界面，或者想保存学习视频，可以运行：
+
+```bash
+python scripts/01_free_fall_record_video.py
+```
+
+它会生成：
+
+```text
+outputs/free_fall.mp4
+```
 
 模型中的核心内容：
 
