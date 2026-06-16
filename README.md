@@ -31,8 +31,13 @@
 学习文档请查看：
 
 - [文档总目录](./docs/README.md)
+- [具身智能长期学习路线](./docs/roadmaps/embodied-ai-roadmap.md)
+- [长期学习与项目路线图](./docs/roadmaps/long-term-plan.md)
+- [加速学习计划](./docs/roadmaps/accelerated-plan.md)
 - [Linker Hand + BODex 学习路线](./docs/roadmaps/linkerhand-bodex.md)
-- [MuJoCo 零基础实战教程](./docs/tutorials/mujoco.md)
+- [MuJoCo 零基础实战教程](examples/mujoco/tutorials/mujoco.md)
+- [MJCF/XML 零基础速查](examples/mujoco/tutorials/mujoco-mjcf-quick-reference.md)
+- [论文阅读目录](./docs/paper/README.md)
 - [MuJoCo 配套示例](./examples/mujoco/README.md)
 
 整体分为以下阶段：
@@ -42,8 +47,8 @@
 | 1 | Python、NumPy、Linux、Git | 进行中 |
 | 2 | 坐标系、矩阵与机器人运动学 | 未开始 |
 | 3 | ROS 2、URDF、TF 和 RViz | 未开始 |
-| 4 | MuJoCo 基础与抓取仿真 | 未开始 |
-| 5 | 跑通 BODex 官方示例 | 未开始 |
+| 4 | MuJoCo 基础与抓取仿真 | 加速进行中 |
+| 5 | 跑通 BODex 官方示例 | 下周开始 |
 | 6 | 适配 Linker Hand 模型 | 未开始 |
 | 7 | 物理仿真与抓取验证 | 未开始 |
 | 8 | Linker Hand 真机控制 | 未开始 |
@@ -158,6 +163,22 @@
 - [ ] 记录小球第一次接触地面的时间。
 - [ ] 学习第三个示例：单关节位置控制。
 
+### 2026-06-16 收尾
+
+今天额外整理：
+
+- 更新具身智能长期学习路线，明确从机器人基础到 VLA、sim-to-real 的长期方向。
+- 更新当前项目长期路线，把 Linker Hand + BODex 拆成阶段交付。
+- 更新两周加速学习计划：本周收口 MuJoCo，下周进入 BODex 和 Linker Hand。
+- 整理文档目录，将 MuJoCo 教程相关内容放入 MuJoCo 教程目录。
+- 新增 `docs/paper/`，用于存放论文阅读笔记。
+- 新增 BODex 论文笔记模板，后续阅读论文时继续补充。
+
+下一步：
+
+- [ ] 按加速计划继续完成 `03_single_joint.py`。
+- [ ] 周末写 MuJoCo 学习总结。
+
 后续日志按照下面的格式记录：
 
 ```markdown
@@ -200,7 +221,7 @@
 
 - [Linker Hand URDF](https://github.com/linker-bot/linkerhand-urdf)
 - [BODex](https://github.com/JYChen18/BODex)
-- [BODex 论文](https://arxiv.org/abs/2412.16490)
+- [BODex 论文笔记](./docs/paper/bodex.md)
 - [Dexonomy](https://github.com/JYChen18/Dexonomy)
 - [DexGraspBench](https://github.com/JYChen18/DexGraspBench)
 - [cuRobo](https://github.com/NVlabs/curobo)

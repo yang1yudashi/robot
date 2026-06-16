@@ -1,6 +1,6 @@
 # MuJoCo 示例代码
 
-本目录是 [MuJoCo 零基础实战教程](../../docs/tutorials/mujoco.md) 的配套代码。
+本目录是 [MuJoCo 零基础实战教程](tutorials/mujoco.md) 的配套代码。
 
 ## 安装
 
