@@ -1,19 +1,35 @@
 <mujoco model="single hinge">
+  <!-- timestep 是每次仿真前进的时间，这里 0.002 秒表示 500Hz。 -->
+  <!-- gravity 是世界坐标系下的重力加速度，z 方向为 -9.81 m/s^2。 -->
   <option timestep="0.002" gravity="0 0 -9.81"/>
 
+  <!-- worldbody 里面放场景中的物体、灯光和机器人结构。 -->
   <worldbody>
+    <!-- 一盏灯，方便 Viewer 中看清模型。 -->
     <light pos="0 0 2"/>
+
+    <!-- 地面。type="plane" 表示无限平面，rgba 表示颜色和透明度。 -->
     <geom name="floor" type="plane" size="2 2 0.1" rgba="0.8 0.8 0.8 1"/>
 
+    <!-- stand 是固定在世界中的支架 body，pos 表示它在世界坐标系的位置。 -->
     <body name="stand" pos="0 0 0.8">
+      <!-- 支架用一个小球表示，只负责可视化和碰撞形状。 -->
       <geom type="sphere" size="0.04" rgba="0.2 0.2 0.2 1"/>
 
+      <!-- arm 是 stand 的子 body，它会围绕下面的 hinge 关节转动。 -->
       <body name="arm">
+        <!-- hinge 表示转动关节，arm 会绕 axis 指定的轴旋转。 -->
+        <!-- axis="0 1 0" 表示绕 y 轴转动。 -->
+        <!-- range="-90 90" 表示关节角度范围是 -90 到 90 度。 -->
+        <!-- damping 是阻尼，让关节运动不会过于抖动。 -->
         <joint name="arm_joint"
                type="hinge"
                axis="0 1 0"
                range="-90 90"
                damping="0.2"/>
+
+        <!-- 胶囊体形状的机械臂，从 fromto 的起点延伸到终点。 -->
+        <!-- mass 是质量，rgba 是颜色。 -->
         <geom name="arm_geom"
               type="capsule"
               fromto="0 0 0 0 0 -0.5"
@@ -24,7 +40,11 @@
     </body>
   </worldbody>
 
+  <!-- actuator 定义执行器，也就是程序可以控制的东西。 -->
   <actuator>
+    <!-- position 是位置控制执行器。 -->
+    <!-- joint="arm_joint" 表示它控制上面定义的 arm_joint。 -->
+    <!-- kp/kv 是控制器参数，ctrlrange 是允许输入的目标角度范围，单位是弧度。 -->
     <position name="arm_position"
               joint="arm_joint"
               kp="30"

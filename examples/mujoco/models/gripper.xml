@@ -1,31 +1,50 @@
 <mujoco model="two finger gripper">
+  <!-- angle="radian" 表示角度单位使用弧度。 -->
   <compiler angle="radian"/>
+
+  <!-- timestep 是仿真步长；gravity 是世界坐标系下的重力。 -->
   <option timestep="0.002" gravity="0 0 -9.81"/>
 
+  <!-- default 里的设置会作为下面 geom 和 joint 的默认参数。 -->
   <default>
+    <!-- friction 的三个数分别对应滑动摩擦、扭转摩擦和滚动摩擦。 -->
+    <!-- condim=4 表示接触约束中考虑法向、两个切向和扭转摩擦。 -->
     <geom friction="1.2 0.01 0.001" condim="4"/>
+
+    <!-- 关节默认阻尼，帮助运动稳定下来。 -->
     <joint damping="1"/>
   </default>
 
+  <!-- worldbody 里定义场景、物体和夹爪结构。 -->
   <worldbody>
+    <!-- 灯光。 -->
     <light pos="0.5 -0.5 1.5"/>
+
+    <!-- 地面。 -->
     <geom name="floor" type="plane" size="2 2 0.1" rgba="0.8 0.8 0.8 1"/>
 
+    <!-- 被夹取的方块。pos 的 z=0.025，让边长 0.05m 的方块刚好放在地面上。 -->
     <body name="object" pos="0 0 0.025">
+      <!-- freejoint 表示方块可以自由移动和旋转。 -->
       <freejoint name="object_free_joint"/>
+
+      <!-- 方块碰撞体和可视化形状。mass 已被改为 0.2，用于观察质量变大后的效果。 -->
       <geom name="object_geom"
             type="box"
             size="0.025 0.025 0.025"
-            mass="0.08"
+            mass="0.2"
             rgba="0.2 0.7 0.3 1"/>
     </body>
 
+    <!-- hand 是夹爪整体。 -->
     <body name="hand" pos="0 0 0">
+      <!-- hand_lift 是滑动关节，沿 z 轴上下移动整个夹爪。 -->
       <joint name="hand_lift"
              type="slide"
              axis="0 0 1"
              range="0 0.2"/>
 
+      <!-- 手掌几何体。 -->
       <geom name="palm_geom"
             type="box"
             pos="0 0 0.10"
@@ -33,11 +52,15 @@
             mass="1"
             rgba="0.3 0.3 0.35 1"/>
 
+      <!-- 左手指，初始放在 y 正方向。 -->
       <body name="left_finger" pos="0 0.07 0.045">
+        <!-- 左手指沿 y 负方向滑动，向方块靠近。 -->
         <joint name="left_finger_joint"
                type="slide"
                axis="0 -1 0"
                range="0 0.045"/>
+
+        <!-- 左手指几何体。 -->
         <geom name="left_finger_geom"
               type="box"
               size="0.035 0.01 0.045"
@@ -45,11 +68,15 @@
               rgba="0.9 0.4 0.2 1"/>
       </body>
 
+      <!-- 右手指，初始放在 y 负方向。 -->
       <body name="right_finger" pos="0 -0.07 0.045">
+        <!-- 右手指沿 y 正方向滑动，向方块靠近。 -->
         <joint name="right_finger_joint"
                type="slide"
                axis="0 1 0"
                range="0 0.045"/>
+
+        <!-- 右手指几何体。 -->
         <geom name="right_finger_geom"
               type="box"
               size="0.035 0.01 0.045"
@@ -59,17 +86,23 @@
     </body>
   </worldbody>
 
+  <!-- actuator 定义可被 data.ctrl 控制的执行器。 -->
   <actuator>
+    <!-- ctrl[0] 控制 hand_lift，让整个夹爪上下移动。 -->
     <position name="lift_actuator"
               joint="hand_lift"
               kp="500"
               kv="30"
               ctrlrange="0 0.2"/>
+
+    <!-- ctrl[1] 控制左手指闭合。 -->
     <position name="left_finger_actuator"
               joint="left_finger_joint"
               kp="120"
               kv="5"
               ctrlrange="0 0.045"/>
+
+    <!-- ctrl[2] 控制右手指闭合。 -->
     <position name="right_finger_actuator"
               joint="right_finger_joint"
               kp="120"

@@ -31,14 +31,15 @@
 学习文档请查看：
 
 - [文档总目录](./docs/README.md)
-- [具身智能长期学习路线](./docs/roadmaps/embodied-ai-roadmap.md)
-- [长期学习与项目路线图](./docs/roadmaps/long-term-plan.md)
 - [加速学习计划](./docs/roadmaps/accelerated-plan.md)
 - [Linker Hand + BODex 学习路线](./docs/roadmaps/linkerhand-bodex.md)
+- [具身智能长期学习路线](./docs/roadmaps/embodied-ai-roadmap.md)
 - [MuJoCo 零基础实战教程](examples/mujoco/tutorials/mujoco.md)
 - [MJCF/XML 零基础速查](examples/mujoco/tutorials/mujoco-mjcf-quick-reference.md)
 - [论文阅读目录](./docs/paper/README.md)
 - [MuJoCo 配套示例](./examples/mujoco/README.md)
+
+每天的学习任务只以[加速学习计划](./docs/roadmaps/accelerated-plan.md)为准。
 
 整体分为以下阶段：
 
@@ -57,13 +58,7 @@
 
 ## 当前任务
 
-- [ ] 确认 Linker Hand 的具体型号和左右手
-- [ ] 确认机械手 SDK 和通信方式
-- [ ] 记录电脑系统、显卡型号和 CUDA 环境
-- [ ] 学习 Python 基础和 NumPy
-- [ ] 下载并在 RViz 中显示 Linker Hand URDF
-- [ ] 整理机械手的全部 link 和 joint
-- [ ] 建立 URDF 关节到真机电机的映射表
+当前每日任务见[加速学习计划](./docs/roadmaps/accelerated-plan.md)。
 
 ## 学习内容
 
@@ -178,6 +173,22 @@
 
 - [ ] 按加速计划继续完成 `03_single_joint.py`。
 - [ ] 周末写 MuJoCo 学习总结。
+
+### 2026-06-17
+
+今天学习计划：
+
+- 收尾周二内容：确认 `hinge`、`axis`、`range`、`actuator` 和 `data.ctrl` 的含义。
+- 完成周三内容：学习 `04_motion_control.py` 和 `05_close_gripper.py`。
+- 理解目标关节值 `ctrl` 和实际关节值 `qpos` 的区别。
+- 理解两指夹爪中的 `slide joint`、执行器顺序和夹爪闭合过程。
+- 在 `05_close_gripper.py` 与 `gripper.xml` 中补充中文注释。
+
+下一步：
+
+- [ ] 开始周四任务：运行 `06_contact_detection.py`。
+- [ ] 学习接触发生在 `geom` 之间。
+- [ ] 输出接触双方名称和首次接触时间。
 
 后续日志按照下面的格式记录：
 

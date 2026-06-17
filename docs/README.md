@@ -2,12 +2,17 @@
 
 这里集中存放机器人学习路线与专题教程。
 
+## 每日学习入口
+
+每天的学习任务只以[加速学习计划](./roadmaps/accelerated-plan.md)为准。
+
+其他路线文档只作为背景参考，不作为当天作业入口。
+
 ## 学习路线
 
-- [具身智能长期学习路线](./roadmaps/embodied-ai-roadmap.md)
-- [Linker Hand + BODex 学习路线](./roadmaps/linkerhand-bodex.md)
 - [加速学习计划：MuJoCo 本周收口，下周进入 Linker Hand + BODex](./roadmaps/accelerated-plan.md)
-- [长期学习与项目路线图](./roadmaps/long-term-plan.md)
+- [Linker Hand + BODex 学习路线](./roadmaps/linkerhand-bodex.md)
+- [具身智能长期学习路线](./roadmaps/embodied-ai-roadmap.md)
 
 ## 专题教程
 
@@ -25,11 +30,9 @@
 
 ## 建议阅读顺序
 
-1. 先阅读具身智能长期学习路线，知道大方向。
-2. 再阅读当前项目长期路线图，知道 Linker Hand + BODex 怎么落地。
-3. 然后按加速学习计划推进最近两周。
-4. 配合 MuJoCo 教程完成 7 个实验。
-5. 用 MuJoCo 教程目录下的 MJCF/XML 速查文档解决模型阅读问题。
+1. 每天先看加速学习计划，确认当天作业。
+2. 配合 MuJoCo 教程完成当天实验。
+3. 用 MJCF/XML 速查文档解决模型阅读问题。
+4. 需要理解项目背景时，再看 Linker Hand + BODex 学习路线。
+5. 具身智能长期学习路线只用于了解大方向。
 6. 论文相关内容统一放到 `docs/paper/`。
-7. 下周跑通 BODex 官方示例。
-8. 开始 Linker Hand 模型与关节映射适配。

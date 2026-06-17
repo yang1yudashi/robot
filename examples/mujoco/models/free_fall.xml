@@ -1,12 +1,21 @@
 <mujoco model="free fall">
+  <!-- timestep 是仿真步长；gravity 设置为月球重力，z 方向为 -1.62 m/s^2。 -->
   <option timestep="0.002" gravity="0 0 -1.62"/>
 
+  <!-- worldbody 是世界中的所有物体。 -->
   <worldbody>
+    <!-- 灯光，方便 Viewer 中观察。 -->
     <light pos="0 0 2"/>
+
+    <!-- 地面，type="plane" 表示无限平面。 -->
     <geom name="floor" type="plane" size="2 2 0.1" rgba="0.8 0.8 0.8 1"/>
 
+    <!-- 小球 body，初始位置 z=2m。 -->
     <body name="ball" pos="0 0 2">
+      <!-- freejoint 表示这个 body 可以在三维空间自由平移和旋转。 -->
       <freejoint/>
+
+      <!-- 小球的形状、质量和颜色。 -->
       <geom name="ball_geom"
             type="sphere"
             size="0.05"
