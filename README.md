@@ -31,9 +31,10 @@
 学习文档请查看：
 
 - [文档总目录](./docs/README.md)
+- [学习路线入口](./docs/roadmaps/README.md)
 - [加速学习计划](./docs/roadmaps/accelerated-plan.md)
-- [Linker Hand + BODex 学习路线](./docs/roadmaps/linkerhand-bodex.md)
-- [具身智能长期学习路线](./docs/roadmaps/embodied-ai-roadmap.md)
+- [Linker Hand + BODex 学习路线](./docs/roadmaps/reference/linkerhand-bodex.md)
+- [具身智能长期学习路线](./docs/roadmaps/reference/embodied-ai-roadmap.md)
 - [MuJoCo 零基础实战教程](examples/mujoco/tutorials/mujoco.md)
 - [MJCF/XML 零基础速查](examples/mujoco/tutorials/mujoco-mjcf-quick-reference.md)
 - [论文阅读目录](./docs/paper/README.md)

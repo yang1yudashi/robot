@@ -1,6 +1,6 @@
 # 具身智能长期学习路线
 
-> 本文只用于了解长期方向，不作为每日学习任务入口。每天的具体作业以[加速学习计划](./accelerated-plan.md)为准。
+> 本文只用于了解长期方向，不作为每日学习任务入口。每天的具体作业以[加速学习计划](../accelerated-plan.md)为准。
 >
 > 目标：从机器人零基础，逐步学习到能做具身智能项目：让智能体在真实或仿真环境中感知、理解、决策并执行动作。
 >
@@ -652,7 +652,7 @@ MuJoCo
 
 当前项目相关：
 
-- [BODex 论文笔记](../paper/bodex.md)
+- [BODex 论文笔记](../../paper/bodex.md)
 - [BODex](https://github.com/JYChen18/BODex)
 - [Linker Hand URDF](https://github.com/linker-bot/linkerhand-urdf)
 - [DexGraspBench](https://github.com/JYChen18/DexGraspBench)

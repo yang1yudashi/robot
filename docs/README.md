@@ -10,9 +10,10 @@
 
 ## 学习路线
 
+- [学习路线入口](./roadmaps/README.md)
 - [加速学习计划：MuJoCo 本周收口，下周进入 Linker Hand + BODex](./roadmaps/accelerated-plan.md)
-- [Linker Hand + BODex 学习路线](./roadmaps/linkerhand-bodex.md)
-- [具身智能长期学习路线](./roadmaps/embodied-ai-roadmap.md)
+- [Linker Hand + BODex 学习路线](./roadmaps/reference/linkerhand-bodex.md)
+- [具身智能长期学习路线](./roadmaps/reference/embodied-ai-roadmap.md)
 
 ## 专题教程
 
