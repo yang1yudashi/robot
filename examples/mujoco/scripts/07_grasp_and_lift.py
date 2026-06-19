@@ -21,6 +21,7 @@ def main() -> None:
 
             close_ratio = min(max((data.time - 0.5) / 1.5, 0.0), 1.0)
             lift_ratio = min(max((data.time - 2.5) / 2.0, 0.0), 1.0)
+            # 目标位置   ctrl[] 里面的数字是执行器的索引，顺序来自 gripper.xml 中 <actuator> 的排列顺序
             data.ctrl[1:3] = 0.045 * close_ratio
             data.ctrl[0] = 0.12 * lift_ratio
 

@@ -191,6 +191,43 @@
 - [ ] 学习接触发生在 `geom` 之间。
 - [ ] 输出接触双方名称和首次接触时间。
 
+### 2026-06-19
+
+今天补完周四并完成周五的 MuJoCo 学习任务。
+
+今天学习：
+
+- 运行 `06_contact_detection.py`，观察夹爪、方块和地面之间的接触。
+- 运行 `07_grasp_and_lift.py`，完成夹爪闭合、抬升和抓取成功判断。
+- 理解 `body` 是物体的坐标系和结构容器，`geom` 是形状和碰撞外壳。
+- 理解 `data.ncon` 记录当前仿真步的接触点数量，不等于接触物体数量。
+- 理解 `data.ctrl[1:3]` 同时设置第 1、2 号执行器的控制目标。
+- 学习在没有 Viewer 和 `time.sleep()` 的情况下运行 MuJoCo 仿真。
+
+完成内容：
+
+- 方块最终高度为 `0.088 m`，简单抓取判断结果为成功。
+- 新增 `07_grasp_and_lift_headless.py`，通过 `mj_step()` 无 UI 运行仿真。
+- 统计仿真过程中的最大接触点数量 `max_contacts`。
+- 将 `object_height`、`grasp_success` 和 `max_contacts` 输出为 JSON。
+- 理解 Viewer 只负责显示，物理仿真由 `mujoco.mj_step()` 推进。
+
+实验结论：
+
+- `ctrl` 是执行器目标值，`qpos` 是关节实际位置，两者不一定相同。
+- 两个 `geom` 之间可以同时产生多个接触点。
+- `max_contacts` 只能作为辅助统计，不能单独判断抓取是否成功。
+- 当前示例通过物体最终高度是否超过 `0.08 m` 判断抓取成功。
+- 无 UI 仿真更适合后续批量测试大量候选抓取。
+
+下一步：
+
+- [ ] 补充 JSON 结果中的 `hold_time`。
+- [ ] 整理 `docs/notes/mujoco-summary.md`。
+- [ ] 总结 `body / geom / joint / actuator`。
+- [ ] 总结 `qpos / qvel / xpos / ctrl / contact`。
+- [ ] 总结保存视频和判断抓取成功的方法。
+
 后续日志按照下面的格式记录：
 
 ```markdown
