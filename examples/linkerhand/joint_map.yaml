@@ -1,0 +1,163 @@
+# Linker Hand L20 right 初版关节表。
+# 当前只记录 URDF 中已经确认的信息。
+# motor_id、耦合关系和 BODex 顺序尚未确认，因此统一保留 TODO。
+
+hand_model: linkerhand_l20
+side: right
+palm_link: base_link
+urdf_source: ../../../resource/linkerhand-urdf/l20/right/linkerhand_l20_right.urdf
+
+fingertip_links:
+  thumb: thumb_distal
+  index: index_distal
+  middle: middle_distal
+  ring: ring_distal
+  pinky: pinky_distal
+
+joints:
+  - urdf_name: pinky_mcp_roll
+    finger: pinky
+    lower_rad: -0.17
+    upper_rad: 0.17
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: pinky_mcp_pitch
+    finger: pinky
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: pinky_pip
+    finger: pinky
+    lower_rad: 0
+    upper_rad: 1.57
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: pinky_dip
+    finger: pinky
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: ring_mcp_roll
+    finger: ring
+    lower_rad: -0.17
+    upper_rad: 0.17
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: ring_mcp_pitch
+    finger: ring
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: ring_pip
+    finger: ring
+    lower_rad: 0
+    upper_rad: 1.57
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: ring_dip
+    finger: ring
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: middle_mcp_roll
+    finger: middle
+    lower_rad: -0.17
+    upper_rad: 0.17
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: middle_mcp_pitch
+    finger: middle
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: middle_pip
+    finger: middle
+    lower_rad: 0
+    upper_rad: 1.57
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: middle_dip
+    finger: middle
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: index_mcp_roll
+    finger: index
+    lower_rad: -0.17
+    upper_rad: 0.17
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: index_mcp_pitch
+    finger: index
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: index_pip
+    finger: index
+    lower_rad: 0
+    upper_rad: 1.57
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: index_dip
+    finger: index
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: thumb_cmc_yaw
+    finger: thumb
+    lower_rad: 0
+    upper_rad: 1.4
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: thumb_cmc_roll
+    finger: thumb
+    lower_rad: 0
+    upper_rad: 1.22
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: thumb_cmc_pitch
+    finger: thumb
+    lower_rad: 0
+    upper_rad: 0.79
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: thumb_mcp
+    finger: thumb
+    lower_rad: 0
+    upper_rad: 1.05
+    motor_id: TODO
+    coupled: TODO
+
+  - urdf_name: thumb_dip
+    finger: thumb
+    lower_rad: 0
+    upper_rad: 1.22
+    motor_id: TODO
+    coupled: TODO
