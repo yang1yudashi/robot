@@ -8,6 +8,14 @@
 
 其他路线文档只作为背景参考，不作为当天作业入口。
 
+每天完成的学习内容持续记录在[每日学习记录](./notes/learning-log.md)中。
+
+## 学习笔记
+
+- [每日学习记录](./notes/learning-log.md)
+- [MuJoCo 学习总结](./notes/mujoco-summary.md)
+- [Linker Hand L20 模型笔记](./notes/linkerhand-model-notes.md)
+
 ## 学习路线
 
 - [学习路线入口](./roadmaps/README.md)

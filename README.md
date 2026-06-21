@@ -76,6 +76,7 @@ D:\CodeStudy\robot\resource\linkerhand-urdf
 
 ### 当前学习
 
+- [每日学习记录](./docs/notes/learning-log.md)
 - [MuJoCo 学习总结](./docs/notes/mujoco-summary.md)
 - [Linker Hand L20 模型笔记](./docs/notes/linkerhand-model-notes.md)
 - [Linker Hand 初版关节表](./examples/linkerhand/joint_map.yaml)
